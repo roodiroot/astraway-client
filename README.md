@@ -1,5 +1,6 @@
-# Проект для производства гелей бытовой химии Astraway
+# Проект одностраничного сайта для производства гелей бытовой химии Astraway
 
+Клиентская часть
 04/11 Одностраничный сайт
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
