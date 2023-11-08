@@ -6,6 +6,8 @@ import Button from "../ui/button";
 import Icon from "../utils/icon";
 import Burger from "./burger";
 import MobilMenu from "./mobil-menu";
+import { Link } from "react-router-dom";
+import LinkMenu from "./link-menu";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -17,23 +19,18 @@ const Header = () => {
         )}
       </AnimatePresence>
       <div className='relative z-0 w-full py-7 flex flex-row gap-3 md:gap-10 justify-between items-center'>
-        <div className=''>
+        <Link to='/' className=''>
           <Icon
-            type='logo'
+            type='logo2'
             className='hidden md:block md:w-[150px] lg:w-[219px]'
           />
           <Icon type='minlogo' className='h-[65px] block md:hidden' />
-        </div>
+        </Link>
         <div className='w-full flex items-center'>
           <nav className='w-full'>
             <ul className='hidden w-full md:max-w-[95%] lg:max-w-[70%] ml-auto md:flex justify-between'>
               {menu_list.map((i: MenuListType) => (
-                <li
-                  className='text-lg p-2 cursor-pointer hover:text-accent transition'
-                  key={i.name}
-                >
-                  {i.name}
-                </li>
+                <LinkMenu key={i.name} name={i.name} id={i.id} />
               ))}
             </ul>
           </nav>

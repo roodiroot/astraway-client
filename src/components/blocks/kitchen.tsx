@@ -1,4 +1,6 @@
+import useScrollElement from "../../hooks/useScrollElement";
 import BlockComponent from "../block-component/block-component";
+const img = require("../../assets/image/1.png");
 
 export type BlockComponentADVType = {
   name: string;
@@ -11,6 +13,7 @@ const adv_list: BlockComponentADVType[] = [
 ];
 
 const Kitchen = () => {
+  const { element } = useScrollElement();
   const title = (
     <h3 className='font-medium text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter'>
       Почувствуйте силу природы{" "}
@@ -25,12 +28,16 @@ const Kitchen = () => {
     </p>
   );
   return (
-    <BlockComponent
-      title={title}
-      description={description}
-      list={adv_list}
-      composition='c2'
-    />
+    <div id='kitchen' ref={element.kitchen}>
+      <BlockComponent
+        title={title}
+        description={description}
+        list={adv_list}
+        composition='c2'
+        img={img}
+        color='rgba(165, 187, 140, 0.2)'
+      />
+    </div>
   );
 };
 

@@ -1,9 +1,10 @@
 export type MenuListType = {
   name: string;
+  id: string;
 };
 export const menu_list: MenuListType[] = [
-  { name: "Главна" },
-  { name: "Применение" },
-  { name: "Кухня" },
-  { name: "Ванная" },
+  { name: "Стирка", id: "wash" },
+  { name: "Мойка посуды", id: "kitchen" },
+  { name: "Для пола", id: "floors" },
+  { name: "Мыло", id: "soap" },
 ];

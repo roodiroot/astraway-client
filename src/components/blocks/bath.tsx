@@ -1,5 +1,7 @@
+import useScrollElement from "../../hooks/useScrollElement";
 import BlockComponent from "../block-component/block-component";
 import { BlockComponentADVType } from "./kitchen";
+const img = require("../../assets/image/2.png");
 
 const adv_list: BlockComponentADVType[] = [
   { name: "Идеально для всех типов ткани", icon: "d3" },
@@ -8,10 +10,11 @@ const adv_list: BlockComponentADVType[] = [
 ];
 
 const Bath = () => {
+  const { element } = useScrollElement();
   const title = (
     <h3 className='font-medium text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter'>
-      Откройте для себя новое{" "}
-      <span className='text-accent'>поколение чистоты</span>{" "}
+      Откройте новые возможности{" "}
+      <span className='text-accent'> стирки белья</span>{" "}
     </h3>
   );
   const description = (
@@ -23,13 +26,17 @@ const Bath = () => {
     </p>
   );
   return (
-    <BlockComponent
-      title={title}
-      description={description}
-      list={adv_list}
-      composition='c3'
-      reverse
-    />
+    <div id='wash' ref={element.wash}>
+      <BlockComponent
+        title={title}
+        description={description}
+        list={adv_list}
+        composition='c3'
+        reverse
+        img={img}
+        color='rgba(218, 164, 190, 0.2)'
+      />
+    </div>
   );
 };
 

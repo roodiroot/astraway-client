@@ -1,11 +1,20 @@
 import { MenuListType } from "../../constance";
+import LinkMenu from "./link-menu";
 
-const MobilMenuBody: React.FC<{ list: MenuListType[] }> = ({ list }) => {
+const MobilMenuBody: React.FC<{
+  list: MenuListType[];
+  onClose?: () => void;
+}> = ({ list, onClose }) => {
   return (
     <div className='w-full h-full p-4 flex flex-col justify-between'>
       <div className='flex-1 tracking-tighter text-2xl text-fiolet font-medium flex flex-col justify-center items-center gap-5'>
         {list.map((i) => (
-          <div>{i.name}</div>
+          <LinkMenu
+            key={i.name}
+            name={i.name}
+            id={i.id}
+            setOpenMobilMenu={onClose}
+          />
         ))}
       </div>
       <div className=' w-full mt-auto flex justify-between items-center text-xs text-lite'>

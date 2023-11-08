@@ -10,8 +10,11 @@ const BlockComponent: React.FC<{
   description: ReactNode;
   list: BlockComponentADVType[];
   composition: "c1" | "c2" | "c3";
+  img: string;
+  color: string;
   reverse?: boolean;
-}> = ({ title, description, list, composition, reverse }) => {
+}> = ({ title, description, list, composition, reverse, img, color }) => {
+  console.log(img);
   return (
     <Container>
       <div className='w-full py-[100px] md:py-[200px]'>
@@ -25,13 +28,19 @@ const BlockComponent: React.FC<{
         >
           <div className='relative w-full py-[200px] '>
             <Icon
-              type={composition}
+              type='bg-composition'
+              fill={color}
               className={cn(
                 "absolute -z-10 top-1/2 -translate-y-1/2 w-[615px] lg:w-[829px] right-[-200px]",
                 reverse
                   ? "md:left-auto md:-right-[100px]"
                   : "md:right-auto md:-left-[100px]"
               )}
+            />
+            <img
+              className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover'
+              src={img}
+              alt=''
             />
           </div>
           <div className='w-full max-w-[650px] space-y-8'>

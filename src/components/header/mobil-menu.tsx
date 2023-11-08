@@ -27,8 +27,8 @@ const MobilMenu: React.FC<{ closeMenu: () => void; list: MenuListType[] }> = ({
         className='relative w-full max-w-[400px] h-full bg-white'
       >
         <Burger x onClick={closeMenu} className='absolute top-0 right-0' />
-        <Icon type='astraway' className='absolute top-4 left-4' />
-        <MobilMenuBody list={list} />
+        <Icon type='logo2' className='absolute top-4 left-4 w-[150px]' />
+        <MobilMenuBody list={list} onClose={closeMenu} />
       </motion.div>
     </motion.div>
   );
