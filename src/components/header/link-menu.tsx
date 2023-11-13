@@ -27,7 +27,7 @@ const LinkMenu: React.FC<{
       className={cn(
         setOpenMobilMenu
           ? ""
-          : "text-lg p-2 cursor-pointer hover:text-accent transition"
+          : "xl:text-lg p-2 cursor-pointer hover:text-accent transition whitespace-nowrap"
       )}
     >
       {name}

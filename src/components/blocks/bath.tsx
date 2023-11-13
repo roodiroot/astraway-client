@@ -10,7 +10,6 @@ const adv_list: BlockComponentADVType[] = [
 ];
 
 const Bath = () => {
-  const { element } = useScrollElement();
   const title = (
     <h3 className='font-medium text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter'>
       Откройте новые возможности{" "}
@@ -26,7 +25,7 @@ const Bath = () => {
     </p>
   );
   return (
-    <div id='wash' ref={element.wash}>
+    <div id='wash'>
       <BlockComponent
         title={title}
         description={description}

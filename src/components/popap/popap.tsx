@@ -13,14 +13,14 @@ const Popap = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       // transition={transitionObjectVariants}
-      className='fixed z-40 inset-0 w-full h-full bg-[#141830]/80 flex justify-center items-center px-4 py-12'
+      className='fixed z-40 inset-0 w-full h-full min-h-[530px]  bg-[#141830]/80  p-4 flex justify-center items-center'
     >
       <motion.div
         initial={{
           opacity: 0,
           translateY: "-100%",
         }}
-        animate={{ opacity: 1, translateY: "-10%" }}
+        animate={{ opacity: 1, translateY: "0%" }}
         exit={{ opacity: 0, translateY: "-100%" }}
         // transition={transitionObjectVariants}
         className='relative rounded-xl bg-white flex'
@@ -34,7 +34,7 @@ const Popap = () => {
         <div className='hidden rounded-xl md:block md:min-w-[270px] relative overflow-hidden'>
           <ImagePopap className=' absolute top-[86px] left-[-30px]' />
         </div>
-        <div className='w-full max-w-[480px] px-12 py-9'>
+        <div className='w-full max-w-[480px] p-6 md:x-12 md:py-9'>
           <div className='space-y-8'>
             <HeaderPopap />
             <Form onClosePopap={onClose} />

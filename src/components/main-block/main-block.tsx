@@ -10,8 +10,8 @@ const MainBlock = () => {
       <div className='flex flex-col sm:flex-row md:items-center py-[55px] sm:py-[130px] md:py-[170px] lg:py-[250px]'>
         <div className='block w-full  space-y-5  sm:space-y-6 sm:max-w-[400px] md:space-y-7 md:max-w-[600px] lg:space-y-8 lg:max-w-[819px]'>
           <h1 className='font-medium text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter'>
-            Экономичная бытовая химия всех типов. Супер оъем&nbsp;&mdash;{" "}
-            <span className='text-accent'>эфективное использоваие</span>
+            Экономичная бытовая химия всех типов. Супер объём&nbsp;&mdash;{" "}
+            <span className='text-accent'>эффективное использование</span>
           </h1>
           <p className='text-lite text-lg sm:text-xl md:text-2xl lg:text-3xl'>
             Закажите бытовую химию в&nbsp;крупных объемах и&nbsp;сэкономьте

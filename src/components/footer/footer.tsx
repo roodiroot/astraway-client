@@ -12,7 +12,7 @@ const Footer = () => {
       <div className='relative z-0 w-full py-7 flex flex-row gap-10 justify-between items-center'>
         <div className=''>
           <Icon
-            type='logo'
+            type='logo2'
             className='hidden md:block md:w-[150px] lg:w-[219px]'
           />
           <Icon type='minlogo' className='h-[65px] block md:hidden' />
@@ -39,8 +39,8 @@ const Footer = () => {
             <div className='flex flex-row gap-9 justify-between'>
               <div className='font-medium'>Телефоны:</div>
               <div className=''>
-                <a href='tel:+79279749222'>8 927 974 92 22</a> <br />
-                <a href='tel:+79279749222'>8 800 974 92 22</a>
+                <a href='tel:88342376544'>8 834 237 65 44</a> <br />
+                <a href='tel:89271816544'>8 927 181 65 44</a>
               </div>
             </div>
             <div className='flex flex-row gap-9 justify-between'>
@@ -52,7 +52,7 @@ const Footer = () => {
             <div className='flex flex-row gap-9 justify-between'>
               <div className='font-medium'>Карьера:</div>
               <div className=''>
-                <a href='tel:+79279749222'>sale@astraway.ru</a>
+                <a href='tel:+79279749222'>info@astraway.ru</a>
               </div>
             </div>
             <a

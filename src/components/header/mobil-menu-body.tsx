@@ -7,7 +7,7 @@ const MobilMenuBody: React.FC<{
 }> = ({ list, onClose }) => {
   return (
     <div className='w-full h-full p-4 flex flex-col justify-between'>
-      <div className='flex-1 tracking-tighter text-2xl text-fiolet font-medium flex flex-col justify-center items-center gap-5'>
+      <ul className='flex-1 tracking-tighter text-2xl text-fiolet font-medium flex flex-col justify-center items-center gap-5'>
         {list.map((i) => (
           <LinkMenu
             key={i.name}
@@ -16,11 +16,11 @@ const MobilMenuBody: React.FC<{
             setOpenMobilMenu={onClose}
           />
         ))}
-      </div>
+      </ul>
       <div className=' w-full mt-auto flex justify-between items-center text-xs text-lite'>
-        <a href=''>Telegram</a>
-        <a href=''>Wildberries</a>
-        <a href=''>Whatsapp</a>
+        <a href={process.env.REACT_APP_TG_LINK}>Telegram</a>
+        <a href={process.env.REACT_APP_WB}>Wildberries</a>
+        <a href={process.env.REACT_APP_WHATSAPP_LINK}>Whatsapp</a>
       </div>
     </div>
   );

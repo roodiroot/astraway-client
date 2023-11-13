@@ -6,18 +6,26 @@ import Kitchen from "../components/blocks/kitchen";
 import Soap from "../components/blocks/soap";
 import DescriptionBlock from "../components/description-block/description-block";
 import MainBlock from "../components/main-block/main-block";
+import AdvantagiesBlockProdList from "../components/advantagies-block/advantagies-block-product-list";
+import Icon from "../components/utils/icon";
+import useScrollElement from "../hooks/useScrollElement";
 
 const MainPage = () => {
-  const kitchen = useRef<null | HTMLDivElement>(null);
+  const { element } = useScrollElement();
   return (
-    <div className='relative'>
+    <div id='start' ref={element.start} className='relative overflow-hidden'>
+      <Icon
+        type='blot1'
+        className='absolute -z-10 top-[18%] left-[-30px] w-[386px]'
+      />
       <MainBlock />
       <DescriptionBlock />
       <AdvantagiesBlock />
       <Kitchen />
       <Bath />
-      <Floors />
-      <Soap />
+      {/* <Floors /> */}
+      <AdvantagiesBlockProdList />
+      {/* <Soap /> */}
     </div>
   );
 };

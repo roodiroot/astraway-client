@@ -28,15 +28,13 @@ const Header = () => {
         </Link>
         <div className='w-full flex items-center'>
           <nav className='w-full'>
-            <ul className='hidden w-full md:max-w-[95%] lg:max-w-[70%] ml-auto md:flex justify-between'>
+            <ul className='hidden w-full md:max-w-[95%] lg:max-w-[70%] ml-auto md:flex justify-between list-none'>
               {menu_list.map((i: MenuListType) => (
                 <LinkMenu key={i.name} name={i.name} id={i.id} />
               ))}
             </ul>
           </nav>
-          <Button className='md:ml-7 lg:ml-10 xl:ml-20'>
-            8 (927)-974-92-22
-          </Button>
+          <Button className='md:ml-7 lg:ml-10 xl:ml-20'>8 834 237 65 44</Button>
         </div>
         <Burger className='md:hidden' onClick={() => setOpen(true)} />
       </div>
