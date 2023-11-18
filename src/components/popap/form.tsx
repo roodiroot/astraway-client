@@ -46,6 +46,8 @@ const Form: React.FC<{ onClosePopap: () => void }> = ({ onClosePopap }) => {
       .then(() => {
         reset();
         onClosePopap();
+        //@ts-ignore
+        window.ym(95603399, "reachGoal", "submit_form");
       })
       .catch(() => {
         console.log("Ошибка отправки");

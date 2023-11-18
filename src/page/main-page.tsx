@@ -1,14 +1,13 @@
-import { useRef } from "react";
 import AdvantagiesBlock from "../components/advantagies-block/advantagies-block";
 import Bath from "../components/blocks/bath";
-import Floors from "../components/blocks/floors";
 import Kitchen from "../components/blocks/kitchen";
-import Soap from "../components/blocks/soap";
 import DescriptionBlock from "../components/description-block/description-block";
 import MainBlock from "../components/main-block/main-block";
 import AdvantagiesBlockProdList from "../components/advantagies-block/advantagies-block-product-list";
 import Icon from "../components/utils/icon";
 import useScrollElement from "../hooks/useScrollElement";
+import CtaBlockWrapper from "../components/cta-blocks/cta-block-wrapper";
+import CtaBlockWrapperBG from "../components/cta-blocks/cta-block-wrapper-bg";
 
 const MainPage = () => {
   const { element } = useScrollElement();
@@ -21,10 +20,13 @@ const MainPage = () => {
       <MainBlock />
       <DescriptionBlock />
       <AdvantagiesBlock />
+      <CtaBlockWrapper />
       <Kitchen />
+      <CtaBlockWrapperBG />
       <Bath />
       {/* <Floors /> */}
       <AdvantagiesBlockProdList />
+
       {/* <Soap /> */}
     </div>
   );

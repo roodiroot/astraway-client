@@ -85,3 +85,7 @@ export const adv_list: ADVType[] = [
     img: require("./assets/image/1.2.png"),
   },
 ];
+
+export type BlockComponentCTAType = {
+  name: string;
+};

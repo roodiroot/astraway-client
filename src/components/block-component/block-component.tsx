@@ -14,7 +14,6 @@ const BlockComponent: React.FC<{
   color: string;
   reverse?: boolean;
 }> = ({ title, description, list, composition, reverse, img, color }) => {
-  console.log(img);
   return (
     <Container>
       <div className='w-full py-[100px] md:py-[200px]'>
