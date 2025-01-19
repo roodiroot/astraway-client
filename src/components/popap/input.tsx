@@ -1,14 +1,16 @@
 import { FieldError, Path, UseFormRegister } from "react-hook-form";
 import { IFormValues } from "./form";
 import { cn } from "../../lib/utils";
+import { z } from "zod";
+import { formSchema } from "../../schema";
 
 interface InputProps {
   placeholder: string;
   title: string;
   label: Path<IFormValues>;
-  register: UseFormRegister<IFormValues>;
+  register: UseFormRegister<z.infer<typeof formSchema>>;
   required?: boolean;
-  error?: FieldError | undefined;
+  error?: string | undefined;
   type?: "email" | "tel";
   className?: string;
 }
@@ -34,23 +36,25 @@ const Input: React.FC<InputProps> = ({
     <div>
       <label
         htmlFor={label}
-        className='font-medium text-fiolet text-sm tracking-tighter'
+        className="font-medium text-fiolet text-sm tracking-tighter"
       >
         {title}
-        {required && <span>*</span>}
+        {required && <span className="text-rose-500">*</span>}
       </label>
-      <div className='w-full border-b border-lite/50'>
+      <div className="w-full border-b border-lite/50">
         <input
           id={label}
           {...register(label, { required, pattern })}
           placeholder={placeholder}
           className={cn(
             "w-full h-full py-2 placeholder:text-lg placeholder:text-lite/50 border-b focus:outline-none",
-            error ? "focus:border-b-rose-500" : "focus:border-b-fiolet"
+            error ? "focus:border-b-rose-500" : "focus:border-b-fiolet",
+            error && "text-rose-500"
           )}
-          type='text'
+          type="text"
         />
       </div>
+      <span className="text-sm text-rose-500">{error}</span>
     </div>
   );
 };
