@@ -21,6 +21,10 @@ const router = createBrowserRouter([
         path: "/confidentiality",
         element: <Confidentiality />,
       },
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
     ],
   },
 ]);

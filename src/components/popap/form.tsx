@@ -1,5 +1,4 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import axios from "axios";
 
 import Button from "../ui/button";
 import Input from "./input";
@@ -9,6 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "../../schema";
 import InputPhone from "./input-phone";
+import { sendFeedback } from "../../api/feedback";
 
 export type IFormValues = {
   name: string;
@@ -35,7 +35,7 @@ const Form: React.FC<{ onClosePopap: () => void }> = ({ onClosePopap }) => {
   });
 
   const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = async (
-    data: z.infer<typeof formSchema>
+    data: z.infer<typeof formSchema>,
   ) => {
     // Валидация данных перед отправкой
     const validationResult = formSchema.safeParse(data);
@@ -46,30 +46,45 @@ const Form: React.FC<{ onClosePopap: () => void }> = ({ onClosePopap }) => {
 
     // Если валидация успешна
     setDisabled(true);
-    let string: any = [];
-    Object.entries(validationResult.data).forEach(([key, value]) => {
-      string.push(`<b>${key}:</b> <i>${String(value)}</i>`);
-    });
+    const { name, email, phone } = validationResult.data;
 
-    const dataString = string.join().replace(/,/g, "%0A");
-    const text = `<b>Форма обратной связи Astraway:</b>%0A%0A${dataString}`;
+    const text = [
+      "Новая заявка с Astraway.ru",
+      "",
+      `Имя: ${name}`,
+      `Телефон: ${phone}`,
+      `Email: ${email || "не указан"}`,
+    ].join("\n");
 
-    await axios
-      .get(
-        `${process.env.REACT_APP_API_URL}/api/client-orders?text=${text}&chatid=${process.env.REACT_APP_CHATID}`
-      )
-      .then(() => {
+    const html = `
+      <div>
+        <h2>Новая заявка с Astraway.ru</h2>
+        <p><strong>Имя:</strong> ${name}</p>
+        <p><strong>Телефон:</strong> ${phone}</p>
+        <p><strong>Email:</strong> ${email || "не указан"}</p>
+      </div>
+    `;
+
+    try {
+      const res = await sendFeedback({
+        to: process.env.REACT_APP_EMAIL_SEND || "",
+        subject: "Обратная связь c Astraway.ru",
+        text,
+        html,
+      });
+
+      if (res.ok) {
         reset();
         onClosePopap();
         //@ts-ignore
         window.ym(95603399, "reachGoal", "submit_form");
-      })
-      .catch(() => {
+      } else {
         console.log("Ошибка отправки");
-      })
-      .finally(() => {
-        setDisabled(false);
-      });
+      }
+    } catch (error) {
+      console.log("Ошибка отправки");
+    }
+    setDisabled(false);
   };
   return (
     <>
@@ -90,24 +105,15 @@ const Form: React.FC<{ onClosePopap: () => void }> = ({ onClosePopap }) => {
           register={register}
           error={errors.email?.message}
         />
-        <InputPhone
-          title="Телефон"
-          label="phone"
-          control={control}
-          error={errors.phone?.message}
-        />
+        <InputPhone title="Телефон" label="phone" control={control} error={errors.phone?.message} />
       </div>
       <div className="w-full flex flex-col gap-2">
-        <Button
-          disabled={disabled}
-          onClick={handleSubmit(onSubmit)}
-          className="w-[200px]"
-        >
+        <Button disabled={disabled} onClick={handleSubmit(onSubmit)} className="w-[200px]">
           Отправить
         </Button>
         <div className="text-xs">
-          Обращаем Ваше внимание на то что отправляя данные вы соглашаетесь с
-          политикой по использованию{" "}
+          Обращаем Ваше внимание на то что отправляя данные вы соглашаетесь с политикой по
+          использованию{" "}
           <Link to="/confidentiality" className="underline">
             персональных данных
           </Link>
