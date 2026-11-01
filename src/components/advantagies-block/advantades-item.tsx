@@ -27,11 +27,18 @@ const AdvantadesItem: React.FC<{
   title: string;
   description: string;
   img?: string;
-}> = ({ icon, title, description, img }) => {
+  border?: boolean;
+}> = ({ icon, title, description, img, border }) => {
   const { onOpen } = usePopap();
   return (
-    <div className="flex flex-col justify-between gap-5 max-w-[400px] mx-auto">
-      <div className={cn("relative w-full flex justify-center", img ? "aspect-[4/5]" : "")}>
+    <div className="flex flex-col gap-4 max-w-[400px] mx-auto">
+      <div
+        className={cn(
+          "relative w-full flex justify-center overflow-hidden  rounded-xl",
+          img ? "aspect-square" : "",
+          border ? "border" : "",
+        )}
+      >
         {img ? (
           <img
             src={img}
@@ -49,14 +56,14 @@ const AdvantadesItem: React.FC<{
         )}
       </div>
       <div className="flex flex-col gap-3">
-        <h3 className="text-fiolet font-medium tracking-tighter text-2xl sm:text-3xl md:text-[33px]">
+        <h3 className="text-fiolet text-balance font-bold text-balance tracking-tighter text-xl sm:leading-6 sm:text-2xl">
           {title}
         </h3>
-        <p className="font-medium text-lg line-clamp-5 text-lite">{description}</p>
+        <p className="font-medium line-clamp-5 text-lite leading-5">{description}</p>
         <div className="flex gap-2 items-center cursor-pointer">
           <div
             onClick={onOpen}
-            className="font-medium text-accent text-[22px] md:text-2xl tracking-tighter"
+            className="font-bold text-accent text-[22px] md:text-2xl tracking-tighter"
           >
             Запросить цену{" "}
           </div>

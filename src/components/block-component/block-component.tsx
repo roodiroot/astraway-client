@@ -55,7 +55,7 @@ const BlockComponent: React.FC<{
           <div className='w-full max-w-[650px] space-y-8'>
             {title}
             {description}
-            <ul className='flex flex-col gap-6 font-medium text-xl sm:text-2xl md:text-3xl tracking-tighter text-fiolet'>
+            <ul className='flex flex-col gap-6 font-bold text-xl sm:text-2xl md:text-3xl tracking-tighter text-fiolet'>
               {list.map((i) => (
                 <ElementList icon={i.icon} name={i.name} key={i.name} />
               ))}

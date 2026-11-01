@@ -37,20 +37,20 @@ const Footer = () => {
         <div className='text-sm text-lite max-w-[300px]'>
           <div className=''>
             <div className='flex flex-row gap-9 justify-between'>
-              <div className='font-medium'>Телефоны:</div>
+              <div className='font-bold'>Телефоны:</div>
               <div className=''>
                 <a href='tel:88342376544'>8 834 237 65 44</a> <br />
                 <a href='tel:89271816544'>8 927 181 65 44</a>
               </div>
             </div>
             <div className='flex flex-row gap-9 justify-between'>
-              <div className='font-medium'>Email:</div>
+              <div className='font-bold'>Email:</div>
               <div className=''>
                 <a href='tel:+79279749222'>info@astraway.ru</a>
               </div>
             </div>
             <div className='flex flex-row gap-9 justify-between'>
-              <div className='font-medium'>Карьера:</div>
+              <div className='font-bold'>Карьера:</div>
               <div className=''>
                 <a href='tel:+79279749222'>info@astraway.ru</a>
               </div>

@@ -19,7 +19,7 @@ const InputPhone: React.FC<InputProps> = ({ label, title, error, control }) => {
     <div>
       <label
         htmlFor={label}
-        className="font-medium text-fiolet text-sm tracking-tighter"
+        className="font-bold text-fiolet text-sm tracking-tighter"
       >
         {title}
         <span className="text-rose-500">*</span>

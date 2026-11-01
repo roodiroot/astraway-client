@@ -8,7 +8,7 @@ const Button: React.FC<{
   className?: string;
 }> = ({ children, variant, className, onClick, disabled }) => {
   const buttonClass = cn(
-    "px-8 py-[18px]  whitespace-nowrap rounded-lg font-medium h-[58px] min-w-[200px] max-w-[200px] relative  transition cursor-pointer",
+    "px-8 py-[18px]  whitespace-nowrap rounded-lg font-bold h-[58px] min-w-[200px] max-w-[200px] relative  transition cursor-pointer",
     variant === "outline"
       ? "bg-white text-accent hover:bg-accent/20 border-2 border-accent"
       : "bg-accent text-white hover:bg-accent/80",

@@ -19,36 +19,116 @@ export type ADVType = {
 
 export const list_products: ADVType[] = [
   {
-    title: "Средства для пола",
+    title: "Средство для пола «Лимон»",
     description:
-      "Эффективные средства для идеальной чистоты полов. Глубоко очищают, не оставляют разводов и безопасны для всех видов поверхностей.",
+      "Универсальное средство для повседневного мытья пола с ароматом лимона. Объём — 5 л.",
     text: "",
     icon: "adv1",
-    img: require("./assets/image/min/floor.jpg"),
+    img: require("./assets/image/products/v4/image_27.jpg"),
   },
   {
-    title: "Жидкое мыло",
+    title: "Мыло для рук «Черника»",
     description:
-      "Жидкое крем-мыло для заботливого очищения и защиты. Удаляет 99.9% бактерий, питает кожу и обеспечивает мягкость. Чистые руки, здоровая кожа.",
+      "Жидкое мыло с ароматом черники для ежедневного мытья рук. Канистра 5 л и флакон с дозатором 1 л.",
     text: "",
     icon: "adv2",
-    img: require("./assets/image/min/soap.jpg"),
+    img: require("./assets/image/products/v4/image_26.jpg"),
   },
   {
-    title: "Гели для стирки",
+    title: "Крем-мыло для рук «Кокос»",
     description:
-      "Концентрированные гели для стирки, которые эффективно борятся с пятнами, берегут ткани и дарят одежде свежесть и долговечность.",
+      "Крем-мыло с ароматом кокоса для ежедневного ухода за руками. Канистра 5 л и флакон с дозатором 1 л.",
+    text: "",
+    icon: "adv2",
+    img: require("./assets/image/products/v4/image_34.jpg"),
+  },
+  {
+    title: "Гель для стирки «Морская свежесть», 2 л",
+    description:
+      "Гель для стирки белья с ароматом морской свежести. Флакон с ручкой и мерным колпачком, объём — 2 л.",
     text: "",
     icon: "adv3",
-    img: require("./assets/image/min/wash.jpg"),
+    img: require("./assets/image/products/v4/image_31.jpg"),
   },
   {
-    title: "Гели для посуды",
+    title: "Гель для стирки «Морская свежесть», 5 л",
     description:
-      "Гели для посуды, с легкостью растворяют жир и оставляют посуду безупречно чистой. Экономичный и мягкий для рук. Сияние чистоты на вашей кухне.",
+      "Гель для стирки белья с ароматом морской свежести в большой канистре. Объём — 5 л.",
+    text: "",
+    icon: "adv3",
+    img: require("./assets/image/products/v4/image_33.jpg"),
+  },
+  {
+    title: "Гель для стирки «Розовая свежесть», 2 л",
+    description:
+      "Гель для стирки белья с ароматом розовой свежести. Флакон с ручкой и мерным колпачком, объём — 2 л.",
+    text: "",
+    icon: "adv3",
+    img: require("./assets/image/products/v4/image_32.jpg"),
+  },
+  {
+    title: "Гель для стирки «Розовая свежесть», 5 л",
+    description:
+      "Гель для стирки белья с ароматом розовой свежести в большой канистре. Объём — 5 л.",
+    text: "",
+    icon: "adv3",
+    img: require("./assets/image/products/v4/image_25.jpg"),
+  },
+  {
+    title: "Гель для посуды «Лимон»",
+    description:
+      "Гель для ежедневного мытья посуды с ароматом лимона. Канистра 5 л и флакон с дозатором 1 л.",
+    text: "",
+    icon: "adv3",
+    img: require("./assets/image/products/v4/image_29.jpg"),
+  },
+  {
+    title: "Гель для посуды «Алоэ»",
+    description:
+      "Гель для ежедневного мытья посуды с ароматом алоэ. Канистра 5 л и флакон с дозатором 1 л.",
+    text: "",
+    icon: "adv3",
+    img: require("./assets/image/products/v4/image_30.jpg"),
+  },
+  {
+    title: "Кондиционер для белья «Цветочное поле»",
+    description:
+      "Кондиционер-ополаскиватель для ухода за бельём после стирки с цветочным ароматом. Объём — 5 л.",
+    text: "",
+    icon: "adv3",
+    img: require("./assets/image/products/v4/image_28.jpg"),
+  },
+  {
+    title: "Кондиционер для белья «Лаванда»",
+    description:
+      "Кондиционер-ополаскиватель для ухода за бельём после стирки с ароматом лаванды. Объём — 5 л.",
+    text: "",
+    icon: "adv3",
+    img: require("./assets/image/products/v4/image_35.jpg"),
+  },
+  {
+    title: "Автошампунь для бесконтактной мойки",
+    description:
+      "Средство для бесконтактной мойки автомобиля и удаления дорожных загрязнений. Объём — 20 л.",
     text: "",
     icon: "adv4",
-    img: require("./assets/image/min/dishes.jpg"),
+    img: require("./assets/image/products/v4/astraway-car-shampoo-white-v2 4.jpg"),
+  },
+  {
+    title: "Автошампунь «Премиум»",
+    description:
+      "Профессиональный автошампунь с усиленной формулой для мойки автомобиля. Объём — 20 л.",
+    text: "",
+    icon: "adv4",
+    img: require("./assets/image/products/v4/astraway-car-shampoo-premium-white 4.jpg"),
+  },
+  {
+    title: "Автошампунь «Актив»",
+    description:
+      "Автошампунь для бережной мойки автомобиля и удаления дорожных загрязнений. Объём — 20 л.",
+    text: "",
+    icon: "adv4",
+    img: require("./assets/image/products/v4/astraway-car-shampoo-active-white 4.jpg"),
   },
 ];
 export const adv_list: ADVType[] = [

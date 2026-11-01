@@ -13,8 +13,8 @@ export default function ErrorPage() {
     <main>
       <Container className="min-h-[68vh] flex items-center justify-center">
         <section className="mx-auto flex max-w-[680px] flex-col items-center px-4 py-16 text-center sm:py-24">
-          <p className="font-medium text-accent text-6xl sm:text-7xl md:text-8xl">{status}</p>
-          <h1 className="mt-5 font-medium text-fiolet text-3xl sm:text-4xl">
+          <p className="font-bold text-accent text-6xl sm:text-7xl md:text-8xl">{status}</p>
+          <h1 className="mt-5 font-bold text-fiolet text-3xl sm:text-4xl">
             Страница не найдена
           </h1>
           <p className="mt-4 max-w-[460px] text-lite text-base sm:text-lg">
@@ -23,7 +23,7 @@ export default function ErrorPage() {
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-5">
             <Link
               to="/"
-              className="px-8 py-[18px] whitespace-nowrap rounded-lg font-medium h-[58px] min-w-[200px] max-w-[200px] relative transition cursor-pointer bg-accent text-white hover:bg-accent/80"
+              className="px-8 py-[18px] whitespace-nowrap rounded-lg font-bold h-[58px] min-w-[200px] max-w-[200px] relative transition cursor-pointer bg-accent text-white hover:bg-accent/80"
             >
               <span className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
                 На главную

@@ -26,7 +26,7 @@ const StaBlock: React.FC<{
                 {title}
                 {description}
                 {list && (
-                  <ul className='flex flex-col gap-2 font-medium text-xl sm:text-2xl md:text-3xl tracking-tighter text-fiolet'>
+                  <ul className='flex flex-col gap-2 font-bold text-xl sm:text-2xl md:text-3xl tracking-tighter text-fiolet'>
                     {list.map((i) => (
                       <ElementList name={i.name} key={i.name} />
                     ))}

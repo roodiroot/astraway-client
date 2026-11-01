@@ -36,7 +36,7 @@ const Input: React.FC<InputProps> = ({
     <div>
       <label
         htmlFor={label}
-        className="font-medium text-fiolet text-sm tracking-tighter"
+        className="font-bold text-fiolet text-sm tracking-tighter"
       >
         {title}
         {required && <span className="text-rose-500">*</span>}

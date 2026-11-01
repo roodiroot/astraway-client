@@ -9,7 +9,7 @@ const MainBlock = () => {
     <Container className="sm:h-[80vh] sm:flex sm:items-center">
       <div className="flex flex-col sm:flex-row md:items-center py-[55px]">
         <div className="block w-full  space-y-5  sm:space-y-6 sm:max-w-[400px] md:space-y-7 md:max-w-[600px] lg:space-y-8 lg:max-w-[819px]">
-          <h1 className="font-medium text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter">
+          <h1 className="font-bold text-fiolet text-4xl leading-[100%] md:text-5xl lg:text-6xl tracking-tighter">
             Прямые поставки бытовой химии от&nbsp;производителя{" "}
             <span className="text-accent">для Вашего бизнеса</span>
           </h1>

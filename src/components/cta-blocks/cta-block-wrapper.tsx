@@ -2,7 +2,7 @@ import StaBlock from "./sta-block";
 
 const CtaBlockWrapper = () => {
   const title = (
-    <h3 className='font-medium text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter'>
+    <h3 className='font-bold text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter'>
       Подберите идеальные решения для{" "}
       <span className='text-accent'>вашего бизнеса!</span>{" "}
     </h3>

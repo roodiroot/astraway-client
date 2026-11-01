@@ -11,7 +11,7 @@ const adv_list: BlockComponentADVType[] = [
 
 const Bath = () => {
   const title = (
-    <h3 className='font-medium text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter'>
+    <h3 className='font-bold text-fiolet text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter'>
       Откройте новые возможности{" "}
       <span className='text-accent'> стирки белья</span>{" "}
     </h3>

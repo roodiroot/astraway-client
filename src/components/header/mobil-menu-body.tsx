@@ -7,7 +7,7 @@ const MobilMenuBody: React.FC<{
 }> = ({ list, onClose }) => {
   return (
     <div className='w-full h-full p-4 flex flex-col justify-between'>
-      <ul className='flex-1 tracking-tighter text-2xl text-fiolet font-medium flex flex-col justify-center items-center gap-5'>
+      <ul className='flex-1 tracking-tighter text-2xl text-fiolet font-bold flex flex-col justify-center items-center gap-5'>
         {list.map((i) => (
           <LinkMenu
             key={i.name}
